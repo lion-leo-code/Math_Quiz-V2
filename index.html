@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Quiz - Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body
+{
+    background: #b92b27; 
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  
+    background: linear-gradient(to right, #1565C0, #b92b27); 
+    
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.login_div1 , .login_div2
+{
+	background: white;
+	padding: 10px;
+    margin-left: 360px;
+	float: none;
+	border-radius: 15px;
+}
+
+
+#player1_name , #player2_name
+{
+	display: inline-block;
+	margin-left: 20px;
+}
+#word
+{
+	width: 60%;
+}
+#word_display
+{
+	letter-spacing: 5px;
+}
+#output
+{
+background: white;
+border-radius: 10px;
+border-top: 10px solid #AA4465;
+padding: 10px;
+float: none;
+text-align: left;
+}
+.container{
+    background-image: url("https://lh3.googleusercontent.com/proxy/8svTQgitaouOlseD_OcdD_s1Np_IaK13M2tgTGghV1hTc4NHn5ZGXD1h45pIoMo0q0lk9RcGRwTiH0HYmAv0bLE0SZx8tgGr8CqXF-Sj929wdeEhwJgqETxg2ekBcOXkSfBZDuu8KxAefJcrgthdSzWHeBPrOU_s3A");
+}
+</style>
+</head>
+<body>
+    <h1 style="color: whitesmoke !important;">Math Quiz</h1>
+    
+    <div class="container" style="height: 100%;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-11 login_div1" style="align-content: center; text-align: center;">
+        <h3>Player 1 login here</h3>
+        <label>User Name: </label>
+        <input type="text" id="player_1_username" class="form-control" placeholder="Player 1 Name">
+        <br>
+    </div>
+    <br>
+    <br>
+    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-11 login_div2"  style="align-content: center; text-align: center;">
+        <h3>Player 2 login here</h3>
+        <label>User Name: </label>
+        <input type="text" id="player_2_username" class="form-control" placeholder="Player 2 Name">
+        <br>
+    </div>
+    <br>
+    <br>
+    <button style="width: 50%;" class="btn btn-success" onclick="AddUser();">Login</button>
+    <br>
+        <br>
+        <br>
+        
+</div></body>
+<script>
+    player1 = "";
+    player2 = "";
+    function AddUser(){
+        player1 = document.getElementById("player_1_username").value;
+        player2 = document.getElementById("player_2_username").value;
+
+        localStorage.setItem("Player 1", player1);
+        localStorage.setItem("Player 2", player2);
+
+        window.location = "quizpage.html";
+    }   
+</script>
+</html>
